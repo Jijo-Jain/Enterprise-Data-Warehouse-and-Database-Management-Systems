@@ -590,6 +590,7 @@ FROM patient
 ORDER BY age_years DESC;
 
 														-- TASK 5 - QUERY PERFORMANCE AND OPTIMIZATION
+-- Before Optimization
 EXPLAIN
 SELECT
   p.patient_id,
@@ -610,6 +611,7 @@ GROUP BY p.patient_id, p.mrn, patient_name
 HAVING total_outstanding > 100
 ORDER BY total_outstanding DESC;
 
+-- After Optimization
 EXPLAIN
 SELECT
   p.patient_id,
